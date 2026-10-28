@@ -1,24 +1,25 @@
+"use strict";
 const models = {
 	compact: {
 		kicker: 'FOR THE HANDS-ON OPERATOR',
-		name: 'FC 250',
+		name: 'FC 50',
 		description: 'A capable starting point for farms, workshops, and anyone ready to make use of local oil.',
-		capacity: 'Up to 250 L',
-		footprint: 'Compact, modular'
+		capacity: 'Up to 50 L',
+		footprint: 'Tiny but mighty'
 	},
 	standard: {
 		kicker: 'FOR A STEADY DAILY ROUTINE',
-		name: 'FC 500',
+		name: 'FC 100',
 		description: 'More room to process regular feedstock for an active farm, fleet, or independent operation.',
-		capacity: 'Up to 500 L',
-		footprint: 'Flexible, modular'
+		capacity: 'Up to 100 L',
+		footprint: 'Average but there is nothing average about this'
 	},
 	production: {
 		kicker: 'FOR A GROWING OPERATION',
-		name: 'FC 1000',
+		name: 'FC 150',
 		description: 'A higher-capacity configuration for teams planning around consistent, larger-volume inputs.',
-		capacity: 'Up to 1,000 L',
-		footprint: 'Configured to site'
+		capacity: 'Up to 150 L',
+		footprint: 'Overkill is just a mith'
 	}
 };
 
@@ -39,6 +40,7 @@ modelOptions.forEach((option) => {
 		document.querySelector('#model-description').textContent = model.description;
 		document.querySelector('#model-capacity').textContent = model.capacity;
 		document.querySelector('#model-footprint').textContent = model.footprint;
+		document.querySelector('.equipment-art').dataset.model = option.dataset.model;
 	});
 });
 
